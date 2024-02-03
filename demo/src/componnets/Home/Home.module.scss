@@ -1,0 +1,371 @@
+@import "../../config/veriabales.scss";
+
+.banner{
+    background:linear-gradient(90deg, rgba(0, 0, 0, 0.737) 0%, rgba(0, 0, 0, 0.573) 100%), url(../../../public/assets/bannr/banner1.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8rem 0 5rem ;
+    .wrp{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        // justify-items: center;
+    }
+    .info{
+        text-align: left;
+        color: $white;
+
+        h1{
+            font-size: 4rem;
+            line-height: 3rem*1.5;
+            padding-bottom: 20px;
+            font-family: 'Playfair Display', serif
+        }
+
+        h5{
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding-bottom: 40px;
+            font-family: 'Playball', cursive;
+        }
+
+        button{
+            background-color: $red;
+            border: none;
+            border-radius: 3px;
+            padding: 0.5rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            
+        }
+    }
+
+    form{
+        background-color: $pry_color;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 100%;
+        .form_heading{
+            h2{
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+        .formControl{
+            margin: 1rem 0;
+            input{
+                width: 100%;
+                border: none;
+                padding: 0.8rem;
+                border-radius: 5px;
+            }
+        }
+        .btn{
+            background-color: $red;
+            border: none;
+            width: 100%;
+            padding: 0.5rem ;
+            color: $white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+// banner end
+
+
+// download end
+
+.our_program{
+    padding: 8rem 0;
+    background-color: $black_pry;
+
+
+    .__wrap{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5rem;
+        justify-items: center;
+        .program_info{
+            text-align: left;
+            h2{
+                font-size: 3rem;
+                position: relative;
+                display: inline;
+                color:$pry_color;
+                font-family: 'Playfair Display', serif;
+            }
+            img{
+               padding-top: 1rem; 
+            }
+
+            p{
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 16px*1.5;
+                color: $white;
+            }
+        }
+
+        .imges{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 90%;
+            }
+        }
+    }
+}
+
+// our program end 
+
+.our_course{
+    background-color: $black_third;
+    padding: 5rem 0;
+    
+    .heading{
+        text-align: center;
+        color: $white;
+        h1{
+            font-size: 36px;
+            color: $pry_color;
+            padding-bottom:1rem ;
+
+        }
+    }
+    .wrap{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        justify-items: center;
+        column-gap: 2rem;
+        text-align: center;
+        padding-top: 3rem;
+        row-gap: 3rem;
+        .item{
+            text-align: center;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 2px solid $red;
+            padding: 2rem;
+            border-radius: 10px;
+            
+            .img{
+                width: 40px;
+                height: 40px;
+                background-color: $white;
+                border-radius: 50px;
+            }
+            h2{
+                font-size: 18px;
+                color: $pry_color;
+                padding: 1rem 0;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.hero{
+    padding: 5rem 0;
+    background-color: #000;
+    .wrp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        column-gap: 2rem;
+
+        .hero_info{
+            h2{
+                font-size: 28px;
+                color: $pry_color;
+                padding-bottom: 1rem;
+            }
+            p{
+                padding-bottom: 20px;
+                font-size: 14px;
+                color: $white;
+            }
+            a{
+                background-color: $red;
+                font-size: 16px;
+                font-weight: 500;
+                color: $white;
+                padding: 0.5rem 2rem;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+.groups{
+    padding: 5rem 0 ;
+    background-color: $black_pry;
+
+    .heading{
+        padding-bottom: 3rem;
+        text-align: center;
+        h1{
+            font-size: 36px;
+            color: $pry_color;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .wrp{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        .item{
+            h5{
+                padding: 1rem 0;
+                font-size: 24px;
+                color: $white;
+            }
+        }
+    }
+}
+
+.certificate{
+    padding: 5rem 0;
+    background-color: $black_third;
+    .heading{
+        padding-bottom: 3rem;
+        text-align: center;
+        h1{
+            font-size: 36px;
+            color: $pry_color;
+            padding-bottom: 1rem;
+        }
+    }
+    .classic_row{
+        display: grid;
+        grid-template-columns: 1.5fr 2.3fr;
+        column-gap: 3rem;
+        img{
+            width: 100%;
+        }
+        h1{
+            font-size: 28px;
+            color: $pry_color;
+            padding-bottom: 2rem;
+        }
+        .info{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+            .head{
+                display: flex;
+                align-items: center;
+                padding-bottom: 1rem;
+                h1{
+                    font-size: 36px;
+                    color: $pry_color;
+                    padding-right: 1rem;
+                    padding-bottom: 0;
+                }
+
+                h3{
+                    font-size: 16px;
+                    position: relative;
+                    color: $white;
+                    padding-left: 3rem;
+                    &::after{
+                        background-color: $pry_color;
+                        width: 40px;
+                        height: 3px;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        content: "";
+                        
+                    }
+                }
+
+            }
+            p{
+                color: $white;
+                font-size: 14px;
+                opacity: 0.5;
+                font-weight: 300;
+                letter-spacing: 0.25px;
+
+            }
+        }
+    }
+    .pop_row{
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: 2.3fr 1.5fr;
+        column-gap: 3rem;
+        img{
+            width: 100%;
+        }
+        h1{
+            font-size: 28px;
+            color: $pry_color;
+            padding-bottom: 2rem;
+        }
+        .info{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+            .head{
+                display: flex;
+                align-items: center;
+                padding-bottom: 1rem;
+                h1{
+                    font-size: 36px;
+                    color: $pry_color;
+                    padding-right: 1rem;
+                    padding-bottom: 0;
+                }
+
+                h3{
+                    font-size: 16px;
+                    position: relative;
+                    color: $white;
+                    padding-left: 3rem;
+                    &::after{
+                        background-color: $pry_color;
+                        width: 40px;
+                        height: 3px;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        content: "";
+                        
+                    }
+                }
+
+            }
+            p{
+                color: $white;
+                font-size: 14px;
+                opacity: 0.5;
+                font-weight: 300;
+                letter-spacing: 0.25px;
+
+            }
+        }
+    }
+}

@@ -121,7 +121,7 @@ export default function Home() {
       <section className={style.certificate}>
         <div className='container'>
           <div className={style.heading}>
-            <h1>Guitar Groups</h1>
+            <h1>Diploma Certificate</h1>
             <img src="assets/all_heading.png" alt='' />
           </div>
           <div className={style.classic_row}>
@@ -139,9 +139,7 @@ export default function Home() {
                           </div>
                           <p>{ele.pera}</p>
                         </div>
-                      </div>
-
-    )
+                      </div> )
                 })}
             </div>
             </div>

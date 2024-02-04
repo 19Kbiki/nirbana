@@ -23,6 +23,7 @@ export default function Navbar() {
     const yOffset = -70; 
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
   }
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   // Active  menu current url 
   let location = useLocation();

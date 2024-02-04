@@ -16,6 +16,7 @@
 }
 
 header{
+    display: none;
     // padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -134,26 +135,87 @@ header{
 
 }
 
-@media (max-width: 768px) {
-    header{
 
-        .menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            height: 100vh;
-        }
-    
-        .desktopMenu {
-            display: none;
-        }
-    
-        .mobileMenu {
-            display: block;
-        }
-    }
+@media screen and (max-width:448px){
 
-    /* Add additional styling for the mobile menu if needed */
+    .header_bg {
+        .nav_bar {
+          height: auto;
+          .logo {
+            img {
+              width: 50%;
+            }
+          }
+        }
+      }
+      
+      header {
+        .top_nav {
+          padding: 0.5rem 0;
+        }
+      
+        .nav {
+          padding: 0.5rem 0;
+          .nav_bar {
+            height: auto;
+            .logo {
+              img {
+                margin: 1rem 0 0.5rem;
+                width: 50%;
+              }
+            }
+      
+            .menuIcon {
+              display: block;
+              cursor: pointer;
+              color: red;
+            }
+      
+            .desktopMenu {
+              display: none;
+            }
+      
+            .mobileMenu {
+              display: block;
+              position: absolute;
+              top: 60px;
+              left: 0;
+              width: 100%;
+              background-color: $black_sec;
+              z-index: 999;
+              padding: 1rem;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              ul {
+                flex-direction: column;
+                li {
+                  padding: 0.5rem 0;
+                  a {
+                    color: $white;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    position: relative;
+                    letter-spacing: 0.25px;
+                    &:hover::after {
+                      position: absolute;
+                      bottom: -5px;
+                      left: 0;
+                      right: 0;
+                      content: '';
+                      background-color: $pry_color;
+                      width: auto;
+                      height: 3px;
+                    }
+                    &:hover {
+                      color: $pry_color;
+                    }
+                  }
+                  .btn {
+                    margin-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
 }

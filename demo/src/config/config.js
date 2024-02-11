@@ -4,7 +4,7 @@ export const navbarMenu = [
     {url:"/#programs" , name:"Programs"},
     {url:"/admission" , name:"Admissoin"},
     {url:"/gallery" , name:"Gallery"},
-    {url:"/about" , name:"About us"},
+    // {url:"/about" , name:"About us"},
     {url:"/notice" , name:"Notice"},
 
 ]
@@ -46,9 +46,9 @@ export const courseItem = [
 ]
 
 export const group = [
-{img: "assets/group 1 (1).png", name:"One on one classes"},
-{img: "assets/group 1 (2).png", name:"Group classes"},
-{img: "assets/group 1 (3).png", name:"Online class"},
+{img: "assets/group 1 (1).jpg", name:"One on one classes"},
+{img: "assets/group 1 (2).jpg", name:"Group classes"},
+{img: "assets/group 1 (3).jpg", name:"Online class"},
 
 
 ]

@@ -94,7 +94,17 @@ export default function Navbar() {
                                 <NavHashLink 
                                   activeClassName="active"
                                   scroll={el => scrollWithOffset(el)}
-                                  to={ele.url}> {ele.name} 
+                                  to={ele.url}
+                                  isActive={(match, location) => {
+                                    // Check if the current location matches the navigation item's URL
+                                    if (match) {
+                                      // Add your logic here, if needed
+                                      return true; // Return true to add the "active" class
+                                    }
+                                    return false; // Return false otherwise
+                                  }}
+                                  > {ele.name} 
+                                  
                                 </NavHashLink>
                               </li>
                             )}

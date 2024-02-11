@@ -43,7 +43,7 @@ export default function Admission() {
                 <div className={styles.box}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['DatePicker']}>
-                    <DatePicker value={value} label="Date of Birth" onChange={(newValue) => setValue(newValue)} />
+                    <DatePicker sx={{ width:"100%", margin:"10px 0"}} value={value} label="Date of Birth" onChange={(newValue) => setValue(newValue)} />
                     </DemoContainer>
                 </LocalizationProvider>
                     <TextField sx={{ width:"100%", margin:"10px 0"}} id="outlined-basic" label="School/College" variant="outlined" />

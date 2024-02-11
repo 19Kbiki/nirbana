@@ -1,7 +1,7 @@
 @import "../../config/veriabales.scss";
 
 .banner{
-    background:linear-gradient(90deg, rgba(0, 0, 0, 0.737) 0%, rgba(0, 0, 0, 0.573) 100%), url(../../../public/assets/bannr/banner1.jpg);
+    background:radial-gradient(circle at 85.4% 50.8%, rgba(3, 22, 65, 0.708)0%, rgba(3, 22, 65, 0.708) 74.2%), url(../../../public/assets/bannr/banner1.jpg);
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
@@ -10,7 +10,6 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         align-items: center;
-        // justify-items: center;
     }
     .info{
         text-align: left;
@@ -18,6 +17,7 @@
 
         h1{
             font-size: 4rem;
+            width: 80%;
             line-height: 3rem*1.5;
             padding-bottom: 20px;
             font-family: 'Playfair Display', serif
@@ -45,7 +45,7 @@
     }
 
     form{
-        background-color: $red;
+        background-color: #bdd9fb;
         padding: 2rem;
         border-radius: 10px;
         width: 100%;
@@ -72,6 +72,7 @@
             color: $white;
             font-size: 16px;
             font-weight: 600;
+            border-radius: 5px;
         }
     }
 }
@@ -81,15 +82,39 @@
 
 }
 // banner end
+@keyframes slide {
+    0% {
+      transform: translateX(700%);
+    }
+    100% {
+      transform: translatex(-100%);
+    }
+  }
+  .notice{
+    background-color: $black_sec;
+    padding: 0.5rem;
+    }
 
+.notice_list {
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 3rem;
+  }
+  
+  .notice_item {
+    color: $red;
+    padding-right: 3rem;
+    transform: translateX(700%);
+    animation: slide 20s linear infinite ; /* Apply the slide animation */
+  }
 
 // download end
 
 .our_program{
-    padding: 8rem 0;
+    padding: 3rem 0 ;
     background-color: $black_pry;
-
-
     .__wrap{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -98,10 +123,10 @@
         .program_info{
             text-align: left;
             h2{
-                font-size: 3rem;
+                font-size: 36px;
                 position: relative;
-                display: inline;
-                color:$pry_color;
+                // display: inline;
+                color:$blue_sec;
                 font-family: 'Playfair Display', serif;
             }
             .img_1{
@@ -113,9 +138,11 @@
 
             p{
                 margin-top: 20px;
-                font-size: 16px;
-                line-height: 16px*1.5;
+                font-size: 14px;
+                line-height: 14px*1.5;
                 color: $white;
+                font-weight: 300;
+                opacity: 0.6;
             }
         }
 
@@ -135,7 +162,7 @@
 
 .our_course{
     background-color: $black_third;
-    padding: 5rem 0;
+    padding: 3rem 0;
     
     .heading{
         text-align: center;
@@ -189,7 +216,7 @@
 }
 
 .hero{
-    padding: 5rem 0;
+    padding: 3rem 0;
     background-color: #000;
     .wrp{
         display: flex;
@@ -222,7 +249,7 @@
 }
 
 .groups{
-    padding: 5rem 0 ;
+    padding: 3rem 0 ;
     background-color: $black_pry;
 
     .heading{
@@ -241,7 +268,12 @@
         align-items: center;
         justify-items: center;
         text-align: center;
+        column-gap: 2rem;
         .item{
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
             h5{
                 padding: 1rem 0;
                 font-size: 24px;
@@ -252,7 +284,7 @@
 }
 
 .certificate{
-    padding: 5rem 0;
+    padding: 3rem 0;
     background-color: $black_third;
     .heading{
         padding-bottom: 3rem;
@@ -285,7 +317,7 @@
                 padding-bottom: 1rem;
                 h1{
                     font-size: 36px;
-                    color: $pry_color;
+                    color: #fedc93;
                     padding-right: 1rem;
                     padding-bottom: 0;
                 }
@@ -296,7 +328,7 @@
                     color: $white;
                     padding-left: 3rem;
                     &::after{
-                        background-color: $pry_color;
+                        background-color: #fedc93;
                         width: 40px;
                         height: 3px;
                         position: absolute;
@@ -343,7 +375,7 @@
                 padding-bottom: 1rem;
                 h1{
                     font-size: 36px;
-                    color: $pry_color;
+                    color: #fedc93;
                     padding-right: 1rem;
                     padding-bottom: 0;
                 }
@@ -354,7 +386,7 @@
                     color: $white;
                     padding-left: 3rem;
                     &::after{
-                        background-color: $pry_color;
+                        background-color: #fedc93;
                         width: 40px;
                         height: 3px;
                         position: absolute;

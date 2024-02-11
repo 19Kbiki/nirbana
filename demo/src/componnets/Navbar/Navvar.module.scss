@@ -16,15 +16,13 @@
 }
 
 header{
-    // display: none;
-    // padding: 1rem 0;
     position: fixed;
     width: 100%;
     z-index: 9999;
     background-color:$black_sec;
     top: 0;
     .top_nav{
-        background-color: $pry_color;
+      background-color: $black_pry;
         padding: 0.5rem 0;
         font-family: 'Poppins', sans-serif;
         .wrp{
@@ -117,16 +115,16 @@ header{
                       
                     }
                     .btn{
-                        // background-color: $red;
+                        background-color: $red;
                         margin-left: 1rem;
                         padding:0.5rem 1.5rem;
-                        color: $black_pry;
+                        color: $white;
                         border-radius: 5px;
-                        border: 2.5px solid $red;
+                        // border: 2.5px solid $red;
                         // box-shadow: 0 0 5px #ffffff39;
                         i{
                             padding-right: 12px;
-                            color: $black_pry;
+                            color: $white;
                         }
                     }
                 }

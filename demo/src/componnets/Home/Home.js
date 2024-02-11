@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from "../Home/Home.module.scss"
 import { Link } from 'react-router-dom'
 import { bannerInfo, classic, courseItem, group, ourProgram, pop, whyChooseUS } from '../../config/config'
@@ -73,6 +73,8 @@ export default function Home() {
             </div>
         </div>
       </section>
+
+
       <div className={style.mobile_view_form}>
         <div className='container'>
             <form>
@@ -106,6 +108,8 @@ export default function Home() {
       </div>
 
       {/* Banner End */}
+
+      <NoticeBord/>
 
       {/* download end */}
 
@@ -269,4 +273,37 @@ export default function Home() {
       
     </div>
   )
+}
+
+
+ function NoticeBord() {
+  const [animationPaused, setAnimationPaused] = useState(false);
+
+  const handleLinkClick = () => {
+    setAnimationPaused(true);
+  };
+
+  const handleLinkHover = () => {
+    setAnimationPaused(true);
+  };
+
+  const handleLinkLeave = () => {
+    setAnimationPaused(false);
+  };
+  return (
+    <div className={style.notice}>
+    <div className='container'>
+      <div className={style.notice_list}>
+        <Link to="/notice" onClick={handleLinkClick} onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} className={`${style.notice_item} ${style.link}`} style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
+          Notice 1
+        </Link>
+        <Link to="/notice" onClick={handleLinkClick} onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} className={`${style.notice_item} ${style.link}`} style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
+          Notice 2
+        </Link>
+      </div>
+    </div>
+
+  </div>
+
+  );
 }

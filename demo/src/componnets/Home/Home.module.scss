@@ -45,7 +45,7 @@
     }
 
     form{
-        background-color: $pry_color;
+        background-color: $red;
         padding: 2rem;
         border-radius: 10px;
         width: 100%;
@@ -76,6 +76,10 @@
     }
 }
 
+.mobile_view_form{
+    display: none;
+
+}
 // banner end
 
 
@@ -99,6 +103,9 @@
                 display: inline;
                 color:$pry_color;
                 font-family: 'Playfair Display', serif;
+            }
+            .img_1{
+                display: none;
             }
             img{
                padding-top: 1rem; 
@@ -139,6 +146,9 @@
             padding-bottom:1rem ;
 
         }
+    }
+    .mobile_wrp{
+        display: none;
     }
     .wrap{
         display: grid;
@@ -370,10 +380,12 @@
     }
 }
 
-@media  screen and (max-width: 448px){
+@media screen and (max-width: 448px){
     .banner{
         background:linear-gradient(90deg, rgba(0, 0, 0, 0.737) 0%, rgba(0, 0, 0, 0.573) 100%), url(../../../public/assets/bannr/banner1.jpg);
-        padding: 3rem 0 3rem ;
+        padding: 5rem 0 3rem ;
+        background-position: center;
+        background-size: cover;
         .wrp{
             display: grid;
             grid-template-columns:  1fr;
@@ -387,14 +399,14 @@
             color: $white;
     
             h1{
-                font-size: 2rem;
+                font-size: 1.5rem;
                 line-height: 2rem*1.5;
                 padding-bottom: 10px;
                 font-family: 'Playfair Display', serif
             }
     
             h5{
-                font-size: 1.3rem;
+                font-size: 1rem;
                 font-weight: 400;
                 padding-bottom: 20px;
                 font-family: 'Playball', cursive;
@@ -405,7 +417,7 @@
                 border: none;
                 border-radius: 3px;
                 padding: 0.5rem 2rem;
-                font-size: 1.1rem;
+                font-size:12px;
                 font-weight: 500;
                 color: $white;
                 text-transform: uppercase;
@@ -415,13 +427,13 @@
         }
     
         form{
+            display: none;
             margin-top: 3rem;
             background-color: $pry_color;
             padding: 1rem;
             border-radius: 10px;
             width: 100%;
-            position: absolute;
-            top: 0;
+           
             .form_heading{
                 h2{
                     font-size: 18px;
@@ -449,9 +461,52 @@
             }
         }
     }
+    .mobile_view_form{
+        background-color: $sec_color;
+        display: block;
+        padding: 2rem 0;
+        form{
+            background-color: $black_third;
+            padding: 1rem;
+            border-radius: 10px;
+            width: 100%;
+            .form_heading{
+                h2{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $pry_color;
+                    padding-bottom: 0.7rem;
+                }
+            }
+            .box{
+                display: flex;
+                column-gap: 0.5rem;
+            }
+            .formControl{
+                margin: 0.5rem 0 ;
+                input{
+                    width: 100%;
+                    border: none;
+                    padding: 0.8rem;
+                    border-radius: 5px;
+                }
+            }
+            .btn{
+                background-color: $red;
+                border: none;
+                width: 100%;
+                padding: 0.5rem ;
+                color: $white;
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 0.5rem;
+                border-radius: 5px;
+            }
+        }
+    }
     
     .our_program{
-        padding: 8rem 0;
+        padding: 1rem 0;
         background-color: $black_pry;
     
     
@@ -462,8 +517,19 @@
             justify-items: center;
             .program_info{
                 text-align: left;
+                .mobile_view_heading{
+                    display: flex;
+                    align-items: center;
+                    justify-content: baseline;
+                    img{
+                        width: 60%;
+                    }
+                    .img_1{
+                        width: 40%;
+                    }
+                }
                 h2{
-                    font-size: 3rem;
+                    font-size: 24px;
                     position: relative;
                     display: inline;
                     color:$pry_color;
@@ -474,15 +540,18 @@
                 }
     
                 p{
-                    margin-top: 20px;
-                    font-size: 16px;
-                    line-height: 16px*1.5;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    line-height: 12px*1.5;
                     color: $white;
+                    opacity: 0.8;
+                    font-weight: 400;
                 }
             }
     
             .imges{
                 display: flex;
+                display: none;
                 align-items: center;
                 justify-content: center;
     
@@ -497,20 +566,24 @@
     
     .our_course{
         background-color: $black_third;
-        padding: 5rem 0;
+        padding: 2rem 0;
         
         .heading{
             text-align: center;
             color: $white;
             h1{
-                font-size: 36px;
+                font-size: 24px;
                 color: $pry_color;
                 padding-bottom:1rem ;
     
             }
+            img{
+                width: 40%;
+            }
         }
         .wrap{
             display: grid;
+            display: none;
             grid-template-columns: repeat(1,1fr);
             align-items: center;
             justify-items: center;
@@ -545,10 +618,68 @@
                 }
             }
         }
+        .mobile_wrp{
+            display: block;
+            .slider{
+                margin: 2rem 0 0rem; 
+                position: relative;
+        
+                .arrow{
+                    position: absolute;
+                    top: -40px;
+                    left: 90%;
+                    z-index: 9999;
+                    cursor: pointer;
+                    color: $pry_color;
+                }
+                .next{
+                    font-size: 24px;
+                    font-weight: 600;
+                    left: 95%;
+                 
+        
+                }
+                .prev{
+                    font-size: 24px;
+                    font-weight: 600;
+                    left: 86%;
+                    
+                    // background-color: red;
+        
+                }
+                .item{
+                    text-align: center;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border: 2px solid $red;
+                    padding: 2rem;
+                    border-radius: 10px;
+                    
+                    .img{
+                        width: 40px;
+                        height: 40px;
+                        background-color: $white;
+                        border-radius: 50px;
+                    }
+                    h2{
+                        font-size: 18px;
+                        color: $pry_color;
+                        padding: 1rem 0;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+        }
     }
     
     .hero{
-        padding: 5rem 0;
+        padding: 2rem 0;
         background-color: #000;
         .wrp{
             display: flex;
@@ -560,38 +691,47 @@
     
             .hero_info{
                 h2{
-                    font-size: 28px;
+                    font-size: 18px;
                     color: $pry_color;
-                    padding-bottom: 1rem;
+                    padding-bottom: 0.7rem;
                 }
                 p{
-                    padding-bottom: 20px;
-                    font-size: 14px;
+                    padding-bottom: 10px;
+                    font-size: 12px;
                     color: $white;
                 }
                 a{
                     background-color: $red;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 500;
                     color: $white;
                     padding: 0.5rem 2rem;
                     border-radius: 3px;
                 }
             }
+            img{
+                width: 35%;
+            }
+            .img2{
+                display: none;
+            }
         }
     }
     
     .groups{
-        padding: 5rem 0 ;
+        padding: 2rem 0 ;
         background-color: $black_pry;
     
         .heading{
-            padding-bottom: 3rem;
+            padding-bottom: 1rem;
             text-align: center;
             h1{
-                font-size: 36px;
+                font-size: 24px;
                 color: $pry_color;
                 padding-bottom: 1rem;
+            }
+            img{
+            width: 50%;
             }
         }
     
@@ -603,11 +743,11 @@
             text-align: center;
             .item{
                 img{
-                    width: 100%;
+                    width: 80%;
                 }
                 h5{
                     padding: 1rem 0;
-                    font-size: 24px;
+                    font-size: 16px;
                     color: $white;
                 }
             }
@@ -615,15 +755,18 @@
     }
     
     .certificate{
-        padding: 5rem 0;
+        padding: 2rem 0;
         background-color: $black_third;
         .heading{
-            padding-bottom: 3rem;
+            padding-bottom: 1rem;
             text-align: center;
             h1{
-                font-size: 36px;
+                font-size: 24px;
                 color: $pry_color;
                 padding-bottom: 1rem;
+            }
+            img{
+                width: 50%;
             }
         }
         .classic_row{
@@ -634,7 +777,8 @@
                 width: 100%;
             }
             h1{
-                font-size: 28px;
+                font-size: 18px;
+                padding-top: 1rem;
                 color: $pry_color;
                 padding-bottom: 2rem;
             }
@@ -647,14 +791,14 @@
                     align-items: center;
                     padding-bottom: 1rem;
                     h1{
-                        font-size: 36px;
+                        font-size: 28px;
                         color: $pry_color;
                         padding-right: 1rem;
                         padding-bottom: 0;
                     }
     
                     h3{
-                        font-size: 16px;
+                        font-size: 14px;
                         position: relative;
                         color: $white;
                         padding-left: 3rem;
@@ -675,7 +819,7 @@
                 }
                 p{
                     color: $white;
-                    font-size: 14px;
+                    font-size: 12px;
                     opacity: 0.5;
                     font-weight: 300;
                     letter-spacing: 0.25px;
@@ -684,17 +828,20 @@
             }
         }
         .pop_row{
-            padding-top: 5rem;
-            display: grid;
-            grid-template-columns:  1fr;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column-reverse;
+           
             column-gap: 3rem;
+            direction: ltr;
             img{
                 width: 100%;
+                margin-bottom: 1rem;
             }
             h1{
-                font-size: 28px;
+                font-size: 18px;
                 color: $pry_color;
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
             }
             .info{
                 display: grid;
@@ -705,14 +852,14 @@
                     align-items: center;
                     padding-bottom: 1rem;
                     h1{
-                        font-size: 36px;
+                        font-size: 28px;
                         color: $pry_color;
                         padding-right: 1rem;
                         padding-bottom: 0;
                     }
     
                     h3{
-                        font-size: 16px;
+                        font-size: 14px;
                         position: relative;
                         color: $white;
                         padding-left: 3rem;
@@ -733,10 +880,11 @@
                 }
                 p{
                     color: $white;
-                    font-size: 14px;
+                    font-size: 12px;
                     opacity: 0.5;
                     font-weight: 300;
                     letter-spacing: 0.25px;
+                    
     
                 }
             }

@@ -2,7 +2,41 @@ import React from 'react'
 import style from "../Home/Home.module.scss"
 import { Link } from 'react-router-dom'
 import { bannerInfo, classic, courseItem, group, ourProgram, pop, whyChooseUS } from '../../config/config'
+import Slider from "react-slick";
 export default function Home() {
+  function SampleNextArrow(props) {
+    const {  onClick } = props;
+    return (
+      <div>
+        <div className={`${style.arrow} ${style.next}`} onClick={onClick}>
+          <span>&#x2192;</span> {/* Unicode right arrow character */}
+        </div>
+      </div>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const {  onClick } = props;
+    return (
+      <div>
+        <div onClick={onClick} className={`${style.arrow} ${style.prev}`}>
+          <span>&#x2190;</span> {/* Unicode left arrow character */}
+        </div>
+      </div>
+    );
+  }
+
+  const settings = {
+    // dots: fals,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // centerMode: true,
+    // centerPadding: "60px",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   return (
     <div>
       <section className={style.banner}>
@@ -39,6 +73,37 @@ export default function Home() {
             </div>
         </div>
       </section>
+      <div className={style.mobile_view_form}>
+        <div className='container'>
+            <form>
+              <div className={style.form_heading}>
+              <h2>SCHEDULE A FREE TRIAL</h2>
+              </div>
+              <div className={style.box}>
+              <div className={style.formControl}>
+                <input src=''placeholder='Full Name'/>
+              </div>
+              <div className={style.formControl}>
+                <input src='' placeholder='Email Address'/>
+              </div>
+
+              </div>
+              <div className={style.box}>
+              <div className={style.formControl}>
+                <input src=''placeholder='Phone No'/>
+              </div>
+              <div className={style.formControl}>
+                <input src=''placeholder='Address'/>
+              </div>
+
+              </div>
+              <div className={style.formControl}>
+              <input src='' placeholder='Course'/>
+              </div>
+              <button className={style.btn}>Submit</button>
+            </form>
+        </div>
+      </div>
 
       {/* Banner End */}
 
@@ -52,9 +117,13 @@ export default function Home() {
                 
                 </div>
                 <div className={style.program_info}>
-                  <div>
+                  <div className={style.mobile_view_heading}>
+                  <div >
                     <h2>{ourProgram.heading}</h2>
                     <img src='assets/all_heading.png' alt=''/>
+                  </div>
+                  <img className={style.img_1} src='assets/about.png' alt=''/>
+
                   </div>
                   <p>{ourProgram.peragraph}</p>
                 </div>
@@ -81,6 +150,23 @@ export default function Home() {
               )
             })}
           </div>
+
+          <div className={style.mobile_wrp}>
+          <Slider {...settings} className={style.slider}>
+            
+
+          {courseItem.map((ele)=>{
+              return(
+                <div className={style.item}>
+                  <div className={style.img}></div>
+                  <h2>{ele.name}</h2>
+                  <p>{ele.peragaraph}</p>
+                </div>
+              )
+            })}
+          
+          </Slider>
+          </div>
         </div>
       </section>
 
@@ -93,7 +179,7 @@ export default function Home() {
               <p>Our students can select any time for their lessons that fits their timetable, whether it’s a weekday evening or weekend morning.</p>
               <Link to="">Learn More</Link>
             </div>
-            <img src='assets/image 2.png'/>
+            <img className={style.img2} src='assets/image 2.png'/>
 
           </div>
         </div>

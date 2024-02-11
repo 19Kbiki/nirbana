@@ -7,6 +7,7 @@ import Footer from './componnets/Footer/Footer';
 import Login from './componnets/Login/Login';
 import Admission from './componnets/Admission/Admission';
 import Gallery from './componnets/Gallery/Gallery';
+import Notice from './componnets/Notice/Notice';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,8 @@ function App() {
               <Route index element={<Home />} />
               <Route path="admission" element={<Admission />} />
               <Route path="gallery" element={<Gallery />} />
+              <Route path="notice" element={<Notice />} />
+
               {/* <Route path="*" element={<NoPage />} /> */}
               <Route path='login' element={<Login />}/>
           </Routes>

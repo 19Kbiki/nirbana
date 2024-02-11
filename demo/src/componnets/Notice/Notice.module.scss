@@ -1,0 +1,104 @@
+@import "../../config/veriabales.scss";
+.notice{
+    padding: 5rem 0;
+    background-color: $black_third;
+    color: $white;
+
+    .notice_box{
+        background-color: $black_sec;
+        border-radius: 10px;
+        padding: 2rem 3rem ;
+        .heading{
+            border-bottom: 0.5px solid #ffffff2b;
+            padding: 1rem 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                font-family: 'Poppins', sans-serif;
+
+            }
+        }
+        .box_wrp{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+       
+            .notice_list{
+                overflow: hidden;
+                overflow-y: scroll;
+                width: 70%;
+                height: 60vh;
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                    border-radius: 10px; /* Width of the scrollbar */
+                  }
+                  
+                  &::-webkit-scrollbar-track {
+                    background: #373737; /* Color of the track */
+                  }
+                  
+                  &::-webkit-scrollbar-thumb {
+                    background: #1b1b1b; /* Color of the scrollbar handle */
+                  }
+                  
+                  &::-webkit-scrollbar-thumb:hover {
+                    background: $red; 
+                    cursor: pointer;
+                    border-radius: 10px;
+                  }
+                .notice_item{
+                    padding: 1rem  0;
+                    border-bottom: 0.5px solid #ffffff1c;
+                    border-right: 0.5px solid #ffffff1c;
+                    h1{
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding: 1rem 0 0;
+                        font-family: 'Poppins', sans-serif;
+
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin: 0;
+                        color: #ffffff52;
+                        i{
+                            padding-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .sidenavbar{
+                text-align: left;
+                width: 30%;
+                padding: 3rem;
+                input{
+                    padding: 0.3rem 1rem;
+                    border-radius: 5px;
+                    width: 100%;
+                }
+                ul{
+                    padding-top: 2rem;
+                    li{
+                        padding: 0.5rem 0;
+                        a{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #ffffffa4;
+                             i{
+                                font-size: 10px; 
+                                padding-right: 0.5rem;
+                             }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

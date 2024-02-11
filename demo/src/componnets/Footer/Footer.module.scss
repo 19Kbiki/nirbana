@@ -70,3 +70,78 @@ footer{
         font-size: 12px;
     }
 }
+
+
+@media screen  and (max-width: 448px) {
+    footer{
+        background-image: url("../../../public/assets/footer.png");
+        background-position: center;
+        background-size: cover;
+        padding:  2rem 0 0;
+        color: $white;
+    
+        .logo{
+            padding-bottom: 30px ;
+            border-bottom: 1px solid $pry_color;
+            img{
+                width: 25%;
+            }
+        }
+        .wrp{
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+    
+            .items{
+                h2{
+                    font-size: 16px ;
+                    font-family: 'Poppins', sans-serif;
+                    color: $pry_color;
+                    position: relative;
+                    margin-bottom: 1rem;
+                    &::after{
+                        background-color: $red;
+                        width: 50px;
+                        height: 3px;
+                        position: absolute;
+                        // top: 10px;
+                        left: 0;
+                        right: 0;
+                        bottom: -10px;
+                        border-radius: 10px;
+                        content: "";
+                    }
+    
+                }
+    
+                ul{
+                    li{
+                        font-size: 12px;
+                        line-height: 1.5rem;
+                        font-weight: 400;
+                        &:hover{
+                            text-decoration: underline;
+                            color: $pry_color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer_btm{
+        background-color: #000;
+        padding: 0.5rem;
+        .wrp{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        P{
+            margin: 0;
+            color: $white;
+            font-size: 10px;
+        }
+    }
+}

@@ -8,11 +8,14 @@ import Login from './componnets/Login/Login';
 import Admission from './componnets/Admission/Admission';
 import Gallery from './componnets/Gallery/Gallery';
 import Notice from './componnets/Notice/Notice';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 function App() {
   return (
     <div className="App">
        <BrowserRouter>
           <Navbar/>
+          <ScrollToTop />
           <Routes>
               <Route index element={<Home />} />
               <Route path="admission" element={<Admission />} />
@@ -29,3 +32,14 @@ function App() {
 }
 
 export default App;
+
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}

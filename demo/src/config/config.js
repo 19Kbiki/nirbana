@@ -2,8 +2,8 @@
 export const navbarMenu = [
     {url:"/" , name:"Home"},
     {url:"/#programs" , name:"Programs"},
-    {url:"/admission" , name:"Admissoin"},
-    {url:"/gallery" , name:"Gallery"},
+    {url:"/admission" , name:"Admission"},
+    // {url:"/gallery" , name:"Gallery"},
     // {url:"/about" , name:"About us"},
     {url:"/notice" , name:"Notice"},
 
@@ -69,14 +69,14 @@ export const footer = [
     {head: "Quick link", list:[
         {listItem: "Home"},
         {listItem: "Programs"},
-        {listItem: "Admissoin"},
+        {listItem: "Admission"},
         {listItem: "Gallery"},
         {listItem: "About us"},
         {listItem: "Notice"},
 
     ]},
     {head: "Contact us", list:[
-        {listItem: "6294467292"},
+        {listItem: " 78660 86359"},
         {listItem: "info@nirvana.com"},
         {listItem: "Siliguri,westbengal"},
 

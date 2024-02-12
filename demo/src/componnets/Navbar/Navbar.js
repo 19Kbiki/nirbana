@@ -68,11 +68,11 @@ export default function Navbar() {
                 <h6>Quick talk with our team : </h6>
                 <h6>
                   <i class="fa-solid fa-phone"></i> 
-                  6294467292
+                  78660 86359
                 </h6>
               </div>
               <div className={style.right}>
-                <button onClick={clickHendal}><i class="fa-solid fa-user"></i> login</button>
+                {/* <button onClick={clickHendal}><i class="fa-solid fa-user"></i> login</button> */}
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Navbar() {
                                 </NavHashLink>
                               </li>
                             )}
-                            <Link className={style.btn} ><i class="fa-regular fa-comments"></i> Get in Touch</Link>
+                            {/* <Link className={style.btn} ><i class="fa-regular fa-comments"></i> Get in Touch</Link> */}
                         </ul>
                   </div>
               </nav>

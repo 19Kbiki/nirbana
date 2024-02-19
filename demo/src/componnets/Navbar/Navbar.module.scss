@@ -19,7 +19,6 @@ header{
     position: fixed;
     width: 100%;
     z-index: 9999;
-    background-color:$black_sec;
     top: 0;
     .top_nav{
       background-color: $black_pry;
@@ -58,7 +57,7 @@ header{
         }
     }
     .nav{
-      background-color: $white;
+      background-color: $black_sec;
         padding: 1.2rem 0;
         .nav_bar{
             display: flex;
@@ -75,7 +74,7 @@ header{
                         padding: 0 0.5rem;
     
                         a{
-                            color: $black_pry;
+                            color: $white;
                             font-size: 1rem;
                             font-weight: 400;
                             position: relative;
@@ -231,7 +230,7 @@ header{
         width: 100%;
         animation: animed 0.6s ease-in-out;
         top: 0;
-        background-color: #fff;
+        background-color: $black_sec;
         z-index: 6;
         box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.39);
         border-bottom: 0.5px solid #00000055;
@@ -251,6 +250,8 @@ header{
         width: 100%;
         top: 0;
         z-index: 6;
+        background-color: $black_sec;
+
         .top_nav{
           background-color: #000;
           padding: 0.5rem 0;
@@ -296,7 +297,7 @@ header{
           padding: 0.5rem 0;
           .logo{
          img{
-          width: 40%;
+          width: 30%;
          }
         }
           .toggle_button {
@@ -371,7 +372,7 @@ header{
         background-color: #fff;
         margin: 0;
         transform: translate(110%);
-        padding-top: 6rem;
+        padding-top: 8rem;
         overflow: hidden;
         overflow-y: scroll;
         height: auto;

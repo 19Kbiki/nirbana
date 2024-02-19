@@ -1,31 +1,13 @@
 import React, { useState } from 'react'
 import style from "../Home/Home.module.scss"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { bannerInfo, classic, courseItem, group, ourProgram, pop, whyChooseUS } from '../../config/config'
 import Slider from "react-slick";
+import SampleNextArrow from "./widgets/samplenextarow"
+import SamplePrevArrow from "./widgets/sampleprevarrow"
+// import drums from "../../../public/assets/icons/drums.svg"
 export default function Home() {
-  function SampleNextArrow(props) {
-    const {  onClick } = props;
-    return (
-      <div>
-        <div className={`${style.arrow} ${style.next}`} onClick={onClick}>
-          <span>&#x2192;</span> {/* Unicode right arrow character */}
-        </div>
-      </div>
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const {  onClick } = props;
-    return (
-      <div>
-        <div onClick={onClick} className={`${style.arrow} ${style.prev}`}>
-          <span>&#x2190;</span> {/* Unicode left arrow character */}
-        </div>
-      </div>
-    );
-  }
-
+  const navigate = useNavigate();
   const settings = {
     // dots: fals,
     infinite: false,
@@ -37,6 +19,10 @@ export default function Home() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
+  const contact = () => {
+    navigate("/contact")
+  }
   return (
     <div>
       <section className={style.banner}>
@@ -46,66 +32,15 @@ export default function Home() {
                   <h1>{bannerInfo.heading}</h1>
                   <h5>{bannerInfo.subHeading}</h5>
                   <button>{bannerInfo.button}</button>
-              </div>
+                  <button onClick={contact}>{bannerInfo.buttonTwo}</button>
 
-              <form>
-                <div className={style.form_heading}>
-                  <h2>SCHEDULE A FREE TRIAL</h2>
-                </div>
-                <div className={style.formControl}>
-                  <input src=''placeholder='Full Name'/>
-                </div>
-                <div className={style.formControl}>
-                  <input src='' placeholder='Email Address'/>
-                </div>
-                <div className={style.formControl}>
-                  <input src=''placeholder='Phone No'/>
-                </div>
-                <div className={style.formControl}>
-                  <input src=''placeholder='Address'/>
-                </div>
-                <div className={style.formControl}>
-                  <input src='' placeholder='Course'/>
-                </div>
-                  <button className={style.btn}>Submit</button>
-              </form>
+              </div>
 
             </div>
         </div>
       </section>
 
 
-      <div className={style.mobile_view_form}>
-        <div className='container'>
-            <form>
-              <div className={style.form_heading}>
-              <h2>SCHEDULE A FREE TRIAL</h2>
-              </div>
-              <div className={style.box}>
-              <div className={style.formControl}>
-                <input src=''placeholder='Full Name'/>
-              </div>
-              <div className={style.formControl}>
-                <input src='' placeholder='Email Address'/>
-              </div>
-
-              </div>
-              <div className={style.box}>
-              <div className={style.formControl}>
-                <input src=''placeholder='Phone No'/>
-              </div>
-              <div className={style.formControl}>
-                <input src=''placeholder='Address'/>
-              </div>
-
-              </div>
-              <div className={style.formControl}>
-              <input src='' placeholder='Course'/>
-              </div>
-              <button className={style.btn}>Submit</button>
-            </form>
-        </div>
-      </div>
 
       {/* Banner End */}
 
@@ -117,7 +52,7 @@ export default function Home() {
         <div className='container'>
             <div className={style.__wrap}>
                 <div className={style.imges}>
-                  <img className={style.img_1} src='assets/about.png' alt=''/>
+                  <img className={style.img_1} src='assets/piona_abut_.png' alt=''/>
                 
                 </div>
                 <div className={style.program_info}>
@@ -147,7 +82,11 @@ export default function Home() {
             {courseItem.map((ele)=>{
               return(
                 <div className={style.item}>
-                  <div className={style.img}></div>
+                  <div className={style.img}>
+                  <img src={ele.img} alt=''/>
+                  {/* <drums/> */}
+
+                  </div>
                   <h2>{ele.name}</h2>
                   <p>{ele.peragaraph}</p>
                 </div>
@@ -162,7 +101,9 @@ export default function Home() {
           {courseItem.map((ele)=>{
               return(
                 <div className={style.item}>
-                  <div className={style.img}></div>
+                  <div className={style.img}>
+                    <img src={ele.img} alt=''/>
+                  </div>
                   <h2>{ele.name}</h2>
                   <p>{ele.peragaraph}</p>
                 </div>
@@ -181,7 +122,7 @@ export default function Home() {
             <div  className={style.hero_info}>
               <h2>Choose the BestTime for Lessons</h2>
               <p>Our students can select any time for their lessons that fits their timetable, whether it’s a weekday evening or weekend morning.</p>
-              <Link to="">Learn More</Link>
+              <Link to="">Book a slot</Link>
             </div>
             <img className={style.img2} src='assets/image 2.png'/>
 
@@ -198,9 +139,12 @@ export default function Home() {
           <div className={style.wrp}>
             {group.map((ele)=>{
               return (
-                <div className={style.item}> 
+                <div className={style.item}>
+                  <div className={style.img}>
                   <img src={ele.img} alt=''/>
+                  </div> 
                   <h5>{ele.name}</h5>
+                  <p>Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As</p>
                 </div>
               )
             })}
@@ -211,13 +155,13 @@ export default function Home() {
       <section className={style.certificate}>
         <div className='container'>
           <div className={style.heading}>
-            <h1>Diploma Certificate</h1>
+            <h1>Certification</h1>
             <img src="assets/all_heading.png" alt='' />
           </div>
           <div className={style.classic_row}>
             <img src='assets/bannr/banner1.jpg' alt='' />
             <div>
-              <h1>Diploma  Classical Music</h1>
+              <h1>Diploma in Classical Music</h1>
               <div className={style.info} >
                 {classic.map((ele, index)=>{
                   return (
@@ -237,7 +181,7 @@ export default function Home() {
           </div>
           <div className={style.pop_row}>
             <div>
-              <h1>Diploma  Rock & Pop</h1>
+              <h1>Diploma in Rock & Pop</h1>
               <div className={style.info} >
                 {pop.map((ele, index)=>{
                   return (

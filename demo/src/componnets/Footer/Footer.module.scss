@@ -1,8 +1,8 @@
 @import "../../config/veriabales.scss";
 
 footer{
-    // background-image: url("../../../public/assets/footer.png");
-    background-color: $pry_color;
+    background-image: url("../../../public/assets/footer.png");
+    // background-color: $pry_color;
     background-position: center;
     background-size: cover;
     padding:  1rem 0 0;
@@ -24,11 +24,11 @@ footer{
             h2{
                 font-size: 22px ;
                 font-family: 'Poppins', sans-serif;
-                color: $red;
+                color: $pry_color;
                 position: relative;
                 margin-bottom: 2rem;
                 &::after{
-                    background-color: $red;
+                    background-color: $pry_color;
                     width: 50px;
                     height: 3px;
                     position: absolute;
@@ -46,7 +46,7 @@ footer{
                 li{
                     font-size: 14px;
                     line-height: 2rem;
-                    color: $black_sec;
+                    color: $white;
                     &:hover{
                         text-decoration: underline;
                         color: $red;

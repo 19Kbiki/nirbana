@@ -14,8 +14,8 @@ export const navbarMenu = [
 export const bannerInfo ={
     heading:"MUSIC EDUCATION SCHOOL",
     subHeading:"Find your creative community",
-    button:"Book a slot ",
-    buttonTwo:"Contact us "
+    button:"Contact us"
+    // buttonTwo:"Book a slot"
 
 }
 
@@ -71,16 +71,17 @@ export const footer = [
     {head: "Quick link", list:[
         {listItem: "Home"},
         {listItem: "Programs"},
-        {listItem: "Admission"},
-        {listItem: "Gallery"},
-        {listItem: "About us"},
+        {listItem: "Enquiry"},
+        // {listItem: "Gallery"},
+        // {listItem: "About us"},
         {listItem: "Notice"},
 
     ]},
     {head: "Contact us", list:[
         {listItem: "+91 62960-71630"},
-        {listItem: "info@nirvana.com"},
-        {listItem: "Siliguri,westbengal"},
+        {listItem: "nirvanaschoolofmusic1@gmail.com"},
+        // {listItem: "info@nirvana.com"},
+        {listItem: "Nirvana School of Music, Lane-4, Pintail Village, Dagapur, Siliguri - 734003"},
 
     ]},
 ]

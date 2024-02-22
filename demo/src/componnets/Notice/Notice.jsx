@@ -9,16 +9,16 @@ export default function Notice() {
   const [classCount, setClassCount] = useState(0);
 
   const admissionNotices = [
-    { head: "Admission Notice 1", date: "12-13-2024", category: "admission" },
-    { head: "Admission Notice 2", date: "12-14-2024", category: "admission" },
-    { head: "Admission Notice 1", date: "12-13-2024", category: "admission" },
-    { head: "Admission Notice 2", date: "12-14-2024", category: "admission" },
+    { head: "", date: "", category: "" },
+    { head: " ", date: "", category: "" },
+    { head: " ", date: "", category: "" },
+    { head: " ", date: "", category: "" },
     // Add more admission notices as needed
   ];
 
   const classNotices = [
-    { head: "Class Notice 1", date: "12-15-2024", category: "class" },
-    { head: "Class Notice 2", date: "12-16-2024", category: "class" },
+    { head: "", date: "", category: "" },
+    { head: "", date: "", category: "" },
     // Add more class notices as needed
   ];
 
@@ -39,11 +39,11 @@ export default function Notice() {
   const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
   };
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const options = { month: 'short', day: 'numeric', year: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
-};
+//   const formatDate = (dateString) => {
+//     const date = new Date(dateString);
+//     const options = { month: 'short', day: 'numeric', year: 'numeric' };
+//     return date.toLocaleDateString('en-US', options);
+// };
 
   return (
     <div>
@@ -58,20 +58,20 @@ export default function Notice() {
             </div>
             <div className={styles.box_wrp}>
               <div className={styles.notice_list}>
-                <div className={styles.notice_liner}>
+                {/* <div className={styles.notice_liner}>
                 {filteredNotices.map((ele, index) => (
                   <div key={index} className={styles.notice_item}>
                     <div className={styles.head}>
-                      <p><i class="fa-solid fa-calendar-days"></i> {formatDate(ele.date)}</p>
+                      <p><i class="fa-solid fa-calendar-days"></i>{ele.date}</p>
                       <h1>{ele.head}</h1>
                     </div>
                   </div>
                 ))}
 
-                </div>
+                </div> */}
               </div>
 
-              <div className={styles.sidenavbar}>
+              {/* <div className={styles.sidenavbar}>
               <input
                 type="search"
                 placeholder="Search..."
@@ -94,9 +94,8 @@ export default function Notice() {
                     <i class="fa-solid fa-play"></i> Class notice ({classCount})
                     </Link>
                   </li>
-                  {/* Add more category links as needed */}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

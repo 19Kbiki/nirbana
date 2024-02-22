@@ -21,12 +21,13 @@
     padding: 3rem 0;
     .glry_nav {
         width: 40%;
+        background: url("../../../public/assets/class (1).jpg");
         ul{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 1rem;
-                border-bottom: 1px solid #c2bfbf6c;
+                border-bottom: 1px solid hsla(0, 2%, 75%, 0.424);
                 li{
                     margin-bottom: 1rem;
                     a{

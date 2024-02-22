@@ -2,9 +2,9 @@
 export const navbarMenu = [
     {url:"/" , name:"Home"},
     {url:"/#programs" , name:"Programs"},
-    {url:"/admission" , name:"Admissoin"},
-    {url:"/gallery" , name:"Gallery"},
-    {url:"/about" , name:"About us"},
+    {url:"/enquiry" , name:"Enquiry"},
+    // {url:"/gallery" , name:"Gallery"},
+    // {url:"/about" , name:"About us"},
     {url:"/notice" , name:"Notice"},
 
 ]
@@ -14,7 +14,9 @@ export const navbarMenu = [
 export const bannerInfo ={
     heading:"MUSIC EDUCATION SCHOOL",
     subHeading:"Find your creative community",
-    button:"Join us "
+    button:"Book a slot ",
+    buttonTwo:"Contact us "
+
 }
 
 // our program
@@ -34,21 +36,21 @@ export const whyChooseUS ={
 }
 
 export const courseItem = [
-    {name: "Piano (Classical)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Keyboard (Classical / Rock & Pop) ", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Classical Guitar (Classical)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Plectrum Guitar (Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Acoustic Guitar (Classical / Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Violin (Classical)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Drums (Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Western Vocals (Classical / Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
-    {name: "Theory of Music ", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/piano.png",name: "Piano (Classical)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/keyboard.png",name: "Keyboard (Classical / Rock & Pop) ", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/guitar.png",name: "Classical Guitar (Classical)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/guitar-pick.png",name: "Plectrum Guitar (Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/guitar.png",name: "Acoustic Guitar (Classical / Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/guitar.png",name: "Violin (Classical)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/drums.png",name: "Drums (Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/vocal.png",name: "Western Vocals (Classical / Rock & Pop)", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
+    {img: "assets/icons/tone.png",name: "Theory of Music ", peragaraph:"Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As "},
 ]
 
 export const group = [
-{img: "assets/group 1 (1).png", name:"One on one classes"},
-{img: "assets/group 1 (2).png", name:"Group classes"},
-{img: "assets/group 1 (3).png", name:"Online class"},
+{img: "assets/group 1 (1).jpg", name:"One on one classes"},
+{img: "assets/group 1 (2).jpg", name:"Group classes"},
+{img: "assets/group 1 (3).jpg", name:"Online class"},
 
 
 ]
@@ -69,14 +71,14 @@ export const footer = [
     {head: "Quick link", list:[
         {listItem: "Home"},
         {listItem: "Programs"},
-        {listItem: "Admissoin"},
+        {listItem: "Admission"},
         {listItem: "Gallery"},
         {listItem: "About us"},
         {listItem: "Notice"},
 
     ]},
     {head: "Contact us", list:[
-        {listItem: "6294467292"},
+        {listItem: "+91 62960-71630"},
         {listItem: "info@nirvana.com"},
         {listItem: "Siliguri,westbengal"},
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { navbarMenu } from '../../config/config'
 import styles from "../Footer/Footer.module.scss"
 import { footer } from '../../config/config'
 export default function Footer() {

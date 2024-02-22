@@ -31,8 +31,8 @@ export default function Home() {
               <div className={style.info}>
                   <h1>{bannerInfo.heading}</h1>
                   <h5>{bannerInfo.subHeading}</h5>
-                  <button>{bannerInfo.button}</button>
-                  <button onClick={contact}>{bannerInfo.buttonTwo}</button>
+                  <button onClick={contact}>{bannerInfo.button}</button>
+                  {/* <button>{bannerInfo.buttonTwo}</button> */}
 
               </div>
 

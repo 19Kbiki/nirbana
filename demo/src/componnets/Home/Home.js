@@ -122,7 +122,7 @@ export default function Home() {
             <div  className={style.hero_info}>
               <h2>Choose the BestTime for Lessons</h2>
               <p>Our students can select any time for their lessons that fits their timetable, whether it’s a weekday evening or weekend morning.</p>
-              <Link to="">Book a slot</Link>
+              {/* <Link to="">Book a slot</Link> */}
             </div>
             <img className={style.img2} src='assets/image 2.png'/>
 
@@ -133,7 +133,7 @@ export default function Home() {
       <section className={style.groups}>
         <div className='container'>
           <div className={style.heading}>
-            <h1>Guitar Groups</h1>
+            <h1>Music Groups</h1>
             <img src="assets/all_heading.png" alt='' />
           </div>
           <div className={style.wrp}>

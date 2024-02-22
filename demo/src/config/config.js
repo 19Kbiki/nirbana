@@ -78,7 +78,7 @@ export const footer = [
 
     ]},
     {head: "Contact us", list:[
-        {listItem: " 78660 86359"},
+        {listItem: "+91 62960-71630"},
         {listItem: "info@nirvana.com"},
         {listItem: "Siliguri,westbengal"},
 

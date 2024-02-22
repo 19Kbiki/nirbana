@@ -1,11 +1,6 @@
-import { Autocomplete, TextField } from '@mui/material'
+
 import React from 'react'
 import styles from "../Admission/contact.module.scss"
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { courseItem } from '../../config/config';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {

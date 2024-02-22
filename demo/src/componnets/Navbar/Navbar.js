@@ -41,7 +41,7 @@ export default function Navbar() {
                 <h6>Quick talk with our team : </h6>
                 <h6>
                   <i class="fa-solid fa-phone"></i> 
-                  62960-71630
+                  +91 62960-71630
                 </h6>
               </div>
               <div className={style.right}>

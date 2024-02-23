@@ -88,7 +88,7 @@ export default function Home() {
 
                   </div>
                   <h2>{ele.name}</h2>
-                  <p>{ele.peragaraph}</p>
+                  <p>{ele.paragraph}</p>
                 </div>
               )
             })}
@@ -144,7 +144,7 @@ export default function Home() {
                   <img src={ele.img} alt=''/>
                   </div> 
                   <h5>{ele.name}</h5>
-                  <p>Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As</p>
+                  <p>{ele.paragraph}</p>
                 </div>
               )
             })}

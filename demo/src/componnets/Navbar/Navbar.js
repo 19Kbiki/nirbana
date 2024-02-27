@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { navbarMenu } from '../../config/config'
+import { companyDetails, navbarMenu } from '../../config/config'
 import style from "./Navbar.module.scss"
 import { NavHashLink } from 'react-router-hash-link';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -41,7 +41,7 @@ export default function Navbar() {
                 <h6>Quick talk with our team : </h6>
                 <h6>
                   <i class="fa-solid fa-phone"></i> 
-                  62960-71630
+                 {companyDetails.phoneNo}
                 </h6>
               </div>
               <div className={style.right}>

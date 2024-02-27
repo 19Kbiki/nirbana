@@ -20,7 +20,7 @@ export default function Home() {
     prevArrow: <SamplePrevArrow />,
   };
 
-  const contact = () => {
+  const contactNav = () => {
     navigate("/contact")
   }
   return (
@@ -31,8 +31,8 @@ export default function Home() {
               <div className={style.info}>
                   <h1>{bannerInfo.heading}</h1>
                   <h5>{bannerInfo.subHeading}</h5>
-                  <button>{bannerInfo.button}</button>
-                  <button onClick={contact}>{bannerInfo.buttonTwo}</button>
+                  <button onClick={contactNav}>{bannerInfo.button}</button>
+                  {/* <button onClick={contact}>{bannerInfo.buttonTwo}</button> */}
 
               </div>
 
@@ -88,7 +88,10 @@ export default function Home() {
 
                   </div>
                   <h2>{ele.name}</h2>
+                  <div className={style.pera}>
                   <p>{ele.peragaraph}</p>
+                  </div>
+                 
                 </div>
               )
             })}
@@ -96,8 +99,6 @@ export default function Home() {
 
           <div className={style.mobile_wrp}>
           <Slider {...settings} className={style.slider}>
-            
-
           {courseItem.map((ele)=>{
               return(
                 <div className={style.item}>
@@ -122,7 +123,7 @@ export default function Home() {
             <div  className={style.hero_info}>
               <h2>Choose the BestTime for Lessons</h2>
               <p>Our students can select any time for their lessons that fits their timetable, whether it’s a weekday evening or weekend morning.</p>
-              <Link to="">Book a slot</Link>
+              {/* <Link to="">Book a slot</Link> */}
             </div>
             <img className={style.img2} src='assets/image 2.png'/>
 
@@ -144,7 +145,7 @@ export default function Home() {
                   <img src={ele.img} alt=''/>
                   </div> 
                   <h5>{ele.name}</h5>
-                  <p>Modern Curriculum Small Class Sizes Monthly Private Lessons Unlimited Studio Time Free Workshops and Bonus Classes Q&As</p>
+                  <p>{ele.pera}</p>
                 </div>
               )
             })}

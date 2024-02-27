@@ -60,7 +60,7 @@
       transform: translateX(700%);
     }
     100% {
-      transform: translatex(-100%);
+      transform: translatex(-450%);
     }
   }
   .notice{
@@ -79,8 +79,8 @@
   .notice_item {
     color: $red;
     padding-right: 3rem;
-    transform: translateX(700%);
-    animation: slide 20s linear infinite ; /* Apply the slide animation */
+    transform: translateX(800%);
+    animation: slide 20s linear infinite ; 
   }
 
 // download end
@@ -149,16 +149,18 @@
     .mobile_wrp{
         display: none;
     }
-    .wrap{
+    .wrap {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
         justify-items: center;
         column-gap: 2rem;
         text-align: center;
         padding-top: 3rem;
         row-gap: 3rem;
-        .item{
+        
+        .item {
+            width: 100%;
             text-align: center;
             color: $white;
             display: flex;
@@ -168,19 +170,28 @@
             border: 2px solid $red;
             padding: 2rem;
             border-radius: 10px;
-            
-            .img{
-                img{
+            height: 200px;
+    
+            .img {
+                img {
                     width: 60%;
+                    opacity: 0.7;
                 }
             }
-            h2{
-                font-size: 16px;
+    
+            h2 {
+                font-size: 14px;
                 color: $pry_color;
                 padding: 1rem 0;
             }
-            p{
-                font-size: 12px;
+    
+            .pera p {
+                // width: 100%;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+                font-size: 10px;
+                opacity: 0.7;
+                // white-space: nowrap;
             }
         }
     }
@@ -220,7 +231,7 @@
 }
 
 .groups{
-    padding: 3rem 0 ;
+    padding: 3rem 0  5rem;
     background-color: $black_pry;
 
     .heading{
@@ -257,9 +268,11 @@
             }
             h5{
                 padding: 1rem 0;
-                font-size: 24px;
+                font-size: 18px;
                 color: $white;
                 position: absolute;
+                left: 25%;
+                right: 25%;
             }
 
             p{
@@ -270,9 +283,10 @@
                 background-color: #000000a2;
                 transition: all 0.6s ease-in-out;
                 color: $white;
-                padding: 5rem 0;
+                padding: 5rem 2rem;
                 width: 100%;
                 margin: 0;
+                font-size: 12px;
 
             
             }
@@ -491,7 +505,29 @@
             }
         }
     }
-    
+
+    .notice_list {
+        overflow: hidden; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 3rem;
+      }
+      
+      .notice_item {
+        color: $red;
+        padding-right: 3rem;
+        transform: translateX(300%);
+        animation: slide 5s linear infinite ; 
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(300%);
+        }
+        100% {
+          transform: translatex(-100%);
+        }
+      }
     .our_program{
         padding: 1rem 0;
         background-color: $black_pry;
@@ -505,31 +541,27 @@
             .program_info{
                 text-align: center;
                 .mobile_view_heading{
-                    display: flex;
-                    align-items: center;
-                    justify-content: baseline;
+
                     img{
-                        width: 60%;
-                    }
-                    .img_1{
                         width: 40%;
                     }
                 }
                 h2{
                     font-size: 24px;
                     position: relative;
-                    display: inline;
                     color:$pry_color;
                     font-family: 'Playfair Display', serif;
+                    display: block;
                 }
                 img{
                    padding-top: 1rem; 
                 }
     
                 p{
+                    text-align: left;
                     margin-top: 10px;
-                    font-size: 12px;
-                    line-height: 12px*1.5;
+                    font-size: 10px;
+                    line-height: 10px*1.5;
                     color: $white;
                     opacity: 0.8;
                     font-weight: 400;
@@ -581,13 +613,13 @@
             .item{
                 text-align: center;
                 color: $white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                
                 flex-direction: column;
                 border: 2px solid $red;
                 padding: 2rem;
                 border-radius: 10px;
+                width: 100%;
+                height: 300px !important;
                 
                 .img{
                     width: 40px;
@@ -732,14 +764,17 @@
             text-align: center;
             row-gap: 2rem;
             .item{
+                position: relative;
                 img{
                     width: 100%;
                 }
                 h5{
                     padding: 1rem 0;
-                    font-size: 16px;
+                    font-size: 18px;
                     color: $white;
                     position: relative;
+                    left: 0%;
+                    right: 25%;
                 }
                 p{
                     position: relative;

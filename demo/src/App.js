@@ -12,6 +12,8 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Contact from './componnets/Admission/contact';
 import Qurry from './componnets/Qurry/Qurry';
+import Certificate from './componnets/Certificate/Certificate';
+import Successfull from './componnets/successfull/successfull';
 function App() {
   return (
     <div className="App">
@@ -27,6 +29,10 @@ function App() {
               {/* <Route path="*" element={<NoPage />} /> */}
               <Route path='login' element={<Login />}/>
               <Route path='enquiry' element={<Qurry />}/>
+              <Route path='certification' element={<Certificate />}/>
+              <Route path='thank-you' element={<Successfull />}/>
+
+
 
           </Routes>
           <Footer/>

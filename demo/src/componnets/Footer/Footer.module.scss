@@ -1,7 +1,7 @@
 @import "../../config/veriabales.scss";
 
 footer{
-    background-image: url("../../../public/assets/footer.png");
+    background-image: url("../../../public/assets/footer.webp");
     // background-color: $pry_color;
     background-position: center;
     background-size: cover;
@@ -82,7 +82,7 @@ footer{
 
 @media screen  and (max-width: 448px) {
     footer{
-        background-image: url("../../../public/assets/footer.png");
+        // background-image: url("../../../public/assets/footer.png");
         background-position: center;
         background-size: cover;
         padding:  2rem 0 0;

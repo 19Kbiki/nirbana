@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import style from "../Home/Home.module.scss"
 import { Link, useNavigate } from 'react-router-dom'
-import { bannerInfo, classic, courseItem, group, ourProgram, pop, whyChooseUS } from '../../config/config'
+import { admissionNotices, bannerInfo, classic, courseItem, group, ourProgram, pop, whyChooseUS } from '../../config/config'
 import Slider from "react-slick";
 import SampleNextArrow from "./widgets/samplenextarow"
 import SamplePrevArrow from "./widgets/sampleprevarrow"
+
 // import drums from "../../../public/assets/icons/drums.svg"
 export default function Home() {
   const navigate = useNavigate();
@@ -52,16 +53,16 @@ export default function Home() {
         <div className='container'>
             <div className={style.__wrap}>
                 <div className={style.imges}>
-                  <img className={style.img_1} src='assets/piona_abut_.png' alt=''/>
+                  <img className={style.img_1} src='assets/piona_abut_.webp' alt=''/>
                 
                 </div>
                 <div className={style.program_info}>
                   <div className={style.mobile_view_heading}>
                   <div >
                     <h2>{ourProgram.heading}</h2>
-                    <img src='assets/all_heading.png' alt=''/>
+                    <img src='assets/all_heading.webp' alt=''/>
                   </div>
-                  <img className={style.img_1} src='assets/about.png' alt=''/>
+                  <img className={style.img_1} src='assets/about.webp' alt=''/>
 
                   </div>
                   <p>{ourProgram.peragraph}</p>
@@ -76,7 +77,7 @@ export default function Home() {
         <div className='container'>
           <div className={style.heading}>
             <h1>Music class</h1>
-            <img src='assets/all_heading.png' alt=''/>
+            <img src='assets/all_heading.webp' alt=''/>
           </div>
           <div className={style.wrap}>
             {courseItem.map((ele)=>{
@@ -119,13 +120,13 @@ export default function Home() {
       <section className={style.hero}>
         <div className='container'>
           <div className={style.wrp}>
-            <img src='assets/image 1.png'/>
+            <img src='assets/image 1.webp'/>
             <div  className={style.hero_info}>
               <h2>Choose the BestTime for Lessons</h2>
               <p>Our students can select any time for their lessons that fits their timetable, whether it’s a weekday evening or weekend morning.</p>
               {/* <Link to="">Book a slot</Link> */}
             </div>
-            <img className={style.img2} src='assets/image 2.png'/>
+            <img className={style.img2} src='assets/image 2.webp'/>
 
           </div>
         </div>
@@ -135,7 +136,7 @@ export default function Home() {
         <div className='container'>
           <div className={style.heading}>
             <h1>Guitar Groups</h1>
-            <img src="assets/all_heading.png" alt='' />
+            <img src="assets/all_heading.webp" alt='' />
           </div>
           <div className={style.wrp}>
             {group.map((ele)=>{
@@ -157,10 +158,14 @@ export default function Home() {
         <div className='container'>
           <div className={style.heading}>
             <h1>Certification</h1>
-            <img src="assets/all_heading.png" alt='' />
+            
+              <img src="assets/all_heading.webp" alt='' />
+           
           </div>
           <div className={style.classic_row}>
-            <img src='assets/bannr/banner1.jpg' alt='' />
+            <div className={style.img}>
+             <img src='assets/bannr/banner_2.webp' alt='' />
+            </div>
             <div>
               <h1>Diploma in Classical Music</h1>
               <div className={style.info} >
@@ -200,7 +205,9 @@ export default function Home() {
                 })}
             </div>
             </div>
-            <img src='assets/bannr/banner1.jpg' alt='' />
+            <div className={style.img}>
+              <img src='assets/bannr/banner_1.webp' alt='' />
+            </div>
           </div>
         </div>
       </section>
@@ -239,12 +246,15 @@ export default function Home() {
     <div className={style.notice}>
     <div className='container'>
       <div className={style.notice_list}>
-        <Link to="/notice" onClick={handleLinkClick} onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} className={`${style.notice_item} ${style.link}`} style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
-          Notice 1
-        </Link>
-        <Link to="/notice" onClick={handleLinkClick} onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} className={`${style.notice_item} ${style.link}`} style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
-          Notice 2
-        </Link>
+        {admissionNotices.map((ele)=>{
+          return(
+            <Link to="/notice" onClick={handleLinkClick} onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} className={`${style.notice_item} ${style.link} ${style.blink}`} style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
+              Admission open 20224-25
+            </Link>
+
+          )
+        })}
+        
       </div>
     </div>
 

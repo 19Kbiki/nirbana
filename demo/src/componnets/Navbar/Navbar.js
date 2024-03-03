@@ -53,8 +53,10 @@ export default function Navbar() {
         <div className={style.nav}>
           <div className='container'>
               <nav className={style.nav_bar}>
-                  <div className={style.logo}>
-                      <img src='assets/logo.png' alt='logo' />
+                  <div className={style.logo} >
+                    <Link to="/">
+                      <img src='assets/logo.webp' alt='logo'  />
+                    </Link>
                   </div>
                   <div className={style.menu}>
                         <ul >
@@ -64,13 +66,12 @@ export default function Navbar() {
                                   activeClassName="active"
                                   scroll={el => scrollWithOffset(el)}
                                   to={ele.url}
-                                  isActive={(match, location) => {
-                                    // Check if the current location matches the navigation item's URL
+                                  isActive={(match) => {
+                                   
                                     if (match) {
-                                      // Add your logic here, if needed
-                                      return true; // Return true to add the "active" class
+                                      return true;
                                     }
-                                    return false; // Return false otherwise
+                                    return false; 
                                   }}
                                   > {ele.name} 
                                   

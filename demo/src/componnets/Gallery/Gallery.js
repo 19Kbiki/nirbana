@@ -55,7 +55,7 @@ export default function Gallery() {
   return (
     <div>
       <section className={styles.admission_bnnr}>
-        <img src='assets/bannr/banner.jpg' alt="banner" />
+        <img src='assets/bannr/banner_1.webp' alt="banner" />
       </section>
       <section className={styles.gallery}>
         <div className='container'>

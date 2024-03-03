@@ -5,7 +5,7 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { courseItem } from '../../config/config';
+import { companyDetails, courseItem } from '../../config/config';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
@@ -22,7 +22,7 @@ export default function Contact() {
   return (
     <div>
         <section className={styles.admission_bnnr}>
-           <img src='assets/bannr/banner.jpg' />
+           <img src='assets/bannr/banner_1.webp' />
         </section>
 
         
@@ -47,9 +47,9 @@ function ContactDetails() {
             <>
             <div className={styles.contactDetails}>
                 <h1>Nirvana School of Music</h1>
-                <p><i class="fa-solid fa-phone"></i><span> 62960-71630</span></p>
-                <p><i class="fa-regular fa-envelope"></i><span> nirvanaschoolofmusic1@gmail.com</span></p>
-                <p><i class="fa-solid fa-location-dot"></i><span>Nirvana School of Music, Lane-4, Pintail Village, Dagapur, Siliguri - 734003</span> </p>
+                <p><i class="fa-solid fa-phone"></i><span> {companyDetails.phoneNo}</span></p>
+                <p><i class="fa-regular fa-envelope"></i><span> {companyDetails.email}</span></p>
+                <p><i class="fa-solid fa-location-dot"></i><span>{companyDetails.address1}</span> </p>
                 
                 <ul className={styles.social_mdia}>
                     <li><Link to="https://www.facebook.com/NSMsiliguri" target='blanck' ><i class="fa-brands fa-facebook-f"></i></Link></li>

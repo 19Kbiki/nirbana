@@ -1,0 +1,178 @@
+
+@import "../../config/veriabales.scss";
+
+.heading{
+    
+    background-image:radial-gradient(circle at 85.4% 50.8%, rgba(43, 42, 39, 0.708)0%, rgba(43, 42, 39, 0.708) 74.2%), url("../../../public/assets/bannr/banner_2.webp");
+    background-position: bottom;
+    background-size: cover;
+    
+    h1{
+        padding: 5rem 0;
+        text-align: center;
+
+    }
+}
+.Certificate{
+    background-color: $black_third;
+    padding: 3rem 0;
+    .wrp{
+        .clasic{
+            h2{
+                font-size: 28px;
+                text-transform: capitalize;
+                color: $pry_color;
+                padding: 3 0 ;
+            }
+            .cls_wrp{
+                padding: 3rem 0;
+                .items{
+                    display: flex;
+                    column-gap: 2rem;
+
+                    img{
+                        width: 30%;
+                        border-radius: 10px;
+                    }
+                    .info{
+
+                  
+                            .head{
+                                display: flex;
+                                align-items: center;
+                                padding-bottom: 1rem;
+                                h1{
+                                    font-size: 36px;
+                                    color: $pry_color;
+                                    padding-right: 1rem;
+                                    padding-bottom: 0;
+                                }
+                
+                                h3{
+                                    font-size: 24px;
+                                    position: relative;
+                                    color: $white;
+                                    padding-left: 3rem;
+                                    &::after{
+                                        background-color: $pry_color;
+                                        width: 40px;
+                                        height: 3px;
+                                        position: absolute;
+                                        top: 15px;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        content: "";
+                                        
+                                    }
+                                }
+                
+                            }
+                        
+                        p{
+                            font-size: 14px;
+                            opacity: 0.7;
+                        }
+                    }
+
+                }
+                .items:nth-child(even){
+                    padding: 2rem 0;
+                    flex-direction: row-reverse !important;
+                }
+                
+
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 448px){
+    .heading{
+    
+        // background:radial-gradient(circle at 85.4% 50.8%, rgba(43, 42, 39, 0.708)0%, rgba(43, 42, 39, 0.708) 74.2%), url("../../../public/assets/bannr/banner.jpg");
+        background-position: bottom;
+        background-size: cover;
+        
+        h1{
+            padding: 5rem 0;
+            text-align: center;
+    
+        }
+    }
+    .Certificate{
+        background-color: $black_third;
+        padding: 1rem 0;
+        .wrp{
+            .clasic{
+                h2{
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    color: $pry_color;
+                    padding: 3 0 ;
+                }
+                .cls_wrp{
+                    padding: 1rem 0;
+                    .items{
+                        display: flex;
+                        column-gap: 2rem;
+                        flex-direction: column;
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                        .info{
+                            padding-top: 1rem;
+                      
+                                .head{
+                                    display: flex;
+                                    align-items: center;
+                                    padding-bottom: 1rem;
+                                    h1{
+                                        font-size: 22px;
+                                        color: $pry_color;
+                                        padding-right: 1rem;
+                                        padding-bottom: 0;
+                                    }
+                    
+                                    h3{
+                                        font-size: 14px;
+                                        position: relative;
+                                        color: $white;
+                                        padding-left: 3rem;
+                                        &::after{
+                                            background-color: $pry_color;
+                                            width: 40px;
+                                            height: 3px;
+                                            position: absolute;
+                                            top: 5px;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            content: "";
+                                            
+                                        }
+                                    }
+                    
+                                }
+                            
+                            p{
+                                font-size: 10px;
+                                opacity: 0.7;
+                            }
+                        }
+    
+                    }
+                    .items:nth-child(even){
+                        padding: 1rem 0;
+                        flex-direction: column !important;
+                    }
+                    
+    
+                }
+                
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@ header{
                 display: flex;
                 align-items: center;
                 h6{
-                    font-size: 16px;
+                    font-size: 12px;
                     font-weight: 400;
                     font-family: 'Poppins', sans-serif;
                     
@@ -75,10 +75,10 @@ header{
     
                         a{
                             color: $white;
-                            font-size: 1rem;
-                            font-weight: 400;
+                            font-size: 14px;
+                            font-weight: 300;
                             position: relative;
-                            letter-spacing: 0.25px;
+                            letter-spacing: 0.5px;
                             &:hover::after{
                                 position: absolute;
                                 bottom: -5px;
@@ -116,11 +116,10 @@ header{
                     .btn{
                         background-color: $red;
                         margin-left: 1rem;
-                        padding:0.5rem 1.5rem;
+                        padding: 0.5rem 1rem;
                         color: $white;
                         border-radius: 5px;
-                        // border: 2.5px solid $red;
-                        // box-shadow: 0 0 5px #ffffff39;
+                        font-size: 14px;
                         i{
                             padding-right: 12px;
                             color: $white;

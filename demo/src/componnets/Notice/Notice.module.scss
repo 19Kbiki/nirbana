@@ -49,6 +49,7 @@
                     border-radius: 10px;
                   }
                 .notice_item{
+                    cursor: pointer;
                     padding: 1rem  0;
                     border-bottom: 0.5px solid #ffffff1c;
                     border-right: 0.5px solid #ffffff1c;
@@ -68,6 +69,8 @@
                         color: #ffffff52;
                         i{
                             padding-right: 0.5rem;
+                        color: #ffffff52;
+
                         }
                     }
                 }
@@ -99,6 +102,126 @@
                 }
             }
 
+        }
+    }
+}
+
+@media screen  and (max-width: 448px){
+    .notice{
+        padding: 5rem 0;
+        background-color: $black_third;
+        color: $white;
+    
+        .notice_box{
+            background-color: $black_sec;
+            border-radius: 10px;
+            padding: 2rem 1rem ;
+            .heading{
+                border-bottom: 0.5px solid #ffffff2b;
+                padding: 0rem 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h2{
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20px;
+    
+                }
+            }
+            .box_wrp{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-direction: column-reverse;
+           
+                .notice_list{
+                    overflow: hidden;
+                    overflow-y: scroll;
+                    width: 100%;
+                    height: 60vh;
+    
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                        border-radius: 10px; /* Width of the scrollbar */
+                      }
+                      
+                      &::-webkit-scrollbar-track {
+                        background: #37373700; /* Color of the track */
+                      }
+                      
+                      &::-webkit-scrollbar-thumb {
+                        background: #1b1b1b00; /* Color of the scrollbar handle */
+                      }
+                      
+                      &::-webkit-scrollbar-thumb:hover {
+                        background: $red; 
+                        cursor: pointer;
+                        border-radius: 10px;
+                      }
+                    .notice_item{
+                        cursor: pointer;
+                        padding: 1rem  0;
+                        border-bottom: 0.5px solid #ffffff1c;
+                        border-top:0.5px solid #ffffff1c ;
+                        border-right: 0px solid #ffffff00;
+                        h1{
+                            font-size: 12px;
+                            font-weight: 500;
+                            padding: 0.5rem 0 0.3rem;
+                            font-family: 'Poppins', sans-serif;
+                            text-transform: uppercase;
+                        }
+    
+                        p{
+                            font-size: 8px;
+                            font-weight: 400;
+                            margin: 0;
+                            color: #ffffff52;
+                            i{
+                                padding-right: 0.5rem;
+                            color: #ffffff52;
+    
+                            }
+                        }
+                    }
+                }
+    
+                .sidenavbar{
+                    text-align: left;
+                    width: 100%;
+                    display: flex;
+                    // flex-direction: column-reverse;
+                    padding: 0rem;
+                    position: relative;
+                    input{
+                        padding: 0.3rem 1rem;
+                        border-radius: 5px;
+                        width: 100%;
+                        position: absolute;
+                        right: 0;
+
+                    }
+                    ul{
+                        padding-top: 2rem;
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: space-between;
+                        li{
+                            padding: 0.5rem 0.5rem;
+                            a{
+                                font-size: 8px;
+                                font-weight: 400;
+                                color: #ffffffa4;
+                                 i{
+                                    font-size: 5px; 
+                                    padding-right: 0.5rem;
+                                 }
+                            }
+                        }
+                    }
+                }
+    
+            }
         }
     }
 }

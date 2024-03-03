@@ -72,7 +72,7 @@ return(
                 <div className={style.logo}>
                   <Link to="/">
                   <div className={style.logo}>
-                        <img src='assets/logo.png' alt='logo' />
+                        <img src='assets/logo.webp' alt='logo' />
                     </div>
                   </Link>
                 </div>

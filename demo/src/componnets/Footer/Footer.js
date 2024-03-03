@@ -8,9 +8,7 @@ export default function Footer() {
     <div>
       <footer >
         <div className='container'>
-          <div className={styles.logo}>
-            <img src='assets/logo.png' alt=''/>
-          </div>
+          
 
           <div className={styles.wrp}>
             {footer.map((ele)=>{
@@ -31,6 +29,8 @@ export default function Footer() {
                 </div>
               )
             })}
+         
+
           </div>
         </div>
       </footer>
@@ -38,7 +38,7 @@ export default function Footer() {
           <div className='container'>
               <div className={styles.wrp}>
                         <p>&copy; {currentYear} All right Reserve</p>
-                        <p> Designed with 💕 by <a href="https://www.linkedin.com/in/linktoavijit/" target='_blank' >Madiocre</a> </p>
+                        <p> Designed with 💕 by <a href="https://www.linkedin.com/in/linktoavijit/" target='_blank' >Mediocre</a> </p>
 
               </div>
 

@@ -1,7 +1,7 @@
 @import "../../config/veriabales.scss";
 
 .banner{
-    background:radial-gradient(circle at 85.4% 50.8%, rgba(43, 42, 39, 0.708)0%, rgba(43, 42, 39, 0.708) 74.2%), url(../../../public/assets/bannr/banner1.jpg);
+    background:radial-gradient(circle at 85.4% 50.8%, rgba(43, 42, 39, 0.708)0%, rgba(43, 42, 39, 0.708) 74.2%), url(../../../public/assets/bannr/banner_1.webp);
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
@@ -22,7 +22,7 @@
         h5{
             font-size: 1.3rem;
             font-weight: 400;
-            padding-bottom: 40px;
+            padding-bottom: 30px;
             font-family: 'Playball', cursive;
         }
 
@@ -54,19 +54,10 @@
     display: none;
 
 }
-// banner end
-@keyframes slide {
-    0% {
-      transform: translateX(700%);
-    }
-    100% {
-      transform: translatex(-450%);
-    }
-  }
-  .notice{
+.notice {
     background-color: $black_sec;
     padding: 0.5rem;
-    }
+}
 
 .notice_list {
     overflow: hidden; 
@@ -74,14 +65,33 @@
     align-items: center;
     justify-content: center;
     padding-right: 3rem;
-  }
-  
-  .notice_item {
+}
+
+.notice_item {
     color: $red;
     padding-right: 3rem;
-    transform: translateX(800%);
-    animation: slide 20s linear infinite ; 
-  }
+    transform: translateX(100%);
+    animation: slide 20s linear infinite, blink-animation 0.3s infinite alternate; 
+    font-size: 12px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+@keyframes blink-animation {
+    from {
+        color: red;
+    }
+    to {
+        color: yellow;
+    }
+}
 
 // download end
 
@@ -167,7 +177,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            border: 2px solid $red;
+            border: 4px double $pry_color;
             padding: 2rem;
             border-radius: 10px;
             height: 200px;
@@ -320,6 +330,7 @@
         column-gap: 3rem;
         img{
             width: 100%;
+            border-radius: 10px;
         }
         h1{
             font-size: 28px;
@@ -342,7 +353,7 @@
                 }
 
                 h3{
-                    font-size: 16px;
+                    font-size: 14px;
                     position: relative;
                     color: $white;
                     padding-left: 3rem;
@@ -378,6 +389,7 @@
         column-gap: 3rem;
         img{
             width: 100%;
+            border-radius: 10px;
         }
         h1{
             font-size: 28px;
@@ -400,7 +412,7 @@
                 }
 
                 h3{
-                    font-size: 16px;
+                    font-size: 14px;
                     position: relative;
                     color: $white;
                     padding-left: 3rem;
@@ -433,7 +445,7 @@
 
 @media screen and (max-width: 448px){
     .banner{
-        background:linear-gradient(90deg, rgba(0, 0, 0, 0.737) 0%, rgba(0, 0, 0, 0.573) 100%), url(../../../public/assets/bannr/banner1.jpg);
+        // background:linear-gradient(90deg, rgba(0, 0, 0, 0.737) 0%, rgba(0, 0, 0, 0.573) 100%), url(../../../public/assets/bannr/banner1.jpg);
         padding: 5rem 0 3rem ;
         background-position: center;
         background-size: cover;
@@ -613,9 +625,8 @@
             .item{
                 text-align: center;
                 color: $white;
-                
                 flex-direction: column;
-                border: 2px solid $red;
+                border: 2px double $pry_color;
                 padding: 2rem;
                 border-radius: 10px;
                 width: 100%;
@@ -640,7 +651,7 @@
         .mobile_wrp{
             display: block;
             .slider{
-                margin: 2rem 0 0rem; 
+                margin: 2rem 0 0 ;
                 position: relative;
         
                 .arrow{
@@ -673,9 +684,11 @@
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    border: 2px solid $red;
+                    border: 2px double $pry_color;
                     padding: 2rem;
                     border-radius: 10px;
+                    height: 200px;
+                    
                     
                     .img{
                         display: flex;
@@ -686,12 +699,12 @@
                         }
                     }
                     h2{
-                        font-size: 18px;
+                        font-size: 14px;
                         color: $pry_color;
                         padding: 1rem 0;
                     }
                     p{
-                        font-size: 12px;
+                        font-size: 10px;
                     }
                 }
             }

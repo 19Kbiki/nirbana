@@ -1,7 +1,7 @@
 // navbar menu
     export const navbarMenu = [
         {url:"/" , name:"Home"},
-        {url:"/#programs" , name:"Programs"},
+        {url:"/#courses" , name:"Courses"},
         {url:"/enquiry" , name:"Enquiry"},
         {url:"/gallery" , name:"Gallery"},
         {url:"/certification" , name:"Certification"},
@@ -75,15 +75,15 @@ export const group = [
 
 ]
 export const classic = [
-    {name: "A.T.C.L (Music Performance)" , pera:"Trinity’s performance diplomas open a window for you to pursue professional musicianship."},
-    {name: "L.T.C.L (Music Performance)" , pera:"Work towards your goal of achieving a professional musicianship,  "},
-    {name: "AMusTCL (Music Theory)" , pera:"Trinity’s music theory diplomas focus on theoretical and analytical concepts and procedures,"},
-    {name: "LMusTCL (Music Theory)" , pera:"The course of  study in Music Theory includes the areas of form, analysis, counterpoint and compositional techniques with opportunities for research in "},
+    {name: "A.T.C.L (Music Performance)" , pera:"Trinity's performance diplomas offer pathways to professional musicianship, emphasizing recital planning and execution. Equivalent to a first-year undergraduate recital, they teach classical instrument basics like violin, piano, and guitar."},
+    {name: "L.T.C.L (Music Performance)" , pera:"Pursue professional musicianship with LTCL, akin to a first-year undergraduate recital. Craft a confident program showcasing your classical music expertise, as performance heavily influences your qualification's value."},
+    {name: "AMusTCL (Music Theory)" , pera:"Trinity's music theory diplomas emphasize theoretical concepts and music history in Western classical tradition. AMusTCL is comparable to a first-year undergraduate degree, enhancing candidates' understanding of music teaching theory and practice."},
+    {name: "LMusTCL (Music Theory)" , pera:"Music Theory course covers form, analysis, counterpoint, and compositional techniques, with research opportunities. LMusTCL equals final undergraduate year, assessing candidates' understanding via research, documented experience, case studies, and critical reflection."},
 
 ]
 export const pop = [
-    {name: "A.T.C.L (Music Performance)" , pera:"ATCL is equivalent in difficulty to the first year of an undergraduate degree. Here, the candidates will be equipped with the playing techniques of various musical instruments that make the backbone of rock and pop, like keyboard"},
-    {name: "L.T.C.L (Music Performance)" , pera:"As the  L.T.C.L is  equivalent to the final year of an undergraduate degree, the candidates have a professional sense of performance and musical understanding"},
+    {name: "A.T.C.L (Music Performance)" , pera:"ATCL equals first-year undergraduate difficulty. Candidates learn instrument techniques crucial in rock and pop (e.g., keyboard, drums, plectrum guitar). Choose pieces from updated repertoire lists or submit own-choice selections."},
+    {name: "L.T.C.L (Music Performance)" , pera:"L.T.C.L, akin to final undergraduate year, cultivates professional performance and musical acumen. Graduates emerge as versatile musicians capable of composition, arrangement, and artistic recital performance."},
     
 ]
 

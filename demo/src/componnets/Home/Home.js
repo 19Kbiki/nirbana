@@ -73,10 +73,10 @@ export default function Home() {
 
       {/* Our Programs End */}
 
-      <section className={style.our_course} id='programs'>
+      <section className={style.our_course} id='courses'>
         <div className='container'>
           <div className={style.heading}>
-            <h1>Music class</h1>
+            <h1>Courses</h1>
             <img src='assets/all_heading.webp' alt=''/>
           </div>
           <div className={style.wrap}>
@@ -135,7 +135,7 @@ export default function Home() {
       <section className={style.groups}>
         <div className='container'>
           <div className={style.heading}>
-            <h1>Guitar Groups</h1>
+            <h1>Music Groups</h1>
             <img src="assets/all_heading.webp" alt='' />
           </div>
           <div className={style.wrp}>
@@ -249,7 +249,7 @@ export default function Home() {
         {admissionNotices.map((ele)=>{
           return(
             <Link to="/notice" onClick={handleLinkClick} onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} className={`${style.notice_item} ${style.link} ${style.blink}`} style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
-              Admission open 20224-25
+              Admission open 2024-25
             </Link>
 
           )

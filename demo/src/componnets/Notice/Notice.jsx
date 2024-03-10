@@ -9,8 +9,7 @@ export default function Notice() {
   const [category, setCategory] = useState("all");
   const [admissionCount, setAdmissionCount] = useState(0);
   const [classCount, setClassCount] = useState(0);
-  const [selectedNotice, setSelectedNotice] = useState(null); // State to hold the selected notice
-
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const classNotices = [];
 

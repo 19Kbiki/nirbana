@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Autocomplete, Button, CircularProgress, Paper, Stack, TextField } from "@mui/material";
+import { Alert, Autocomplete, Button, CircularProgress, Paper, Stack, TextField } from "@mui/material";
 import { courseItem, courseItemSelect } from "../../config/config";
+import ReCAPTCHA from "react-google-recaptcha";
 import styles from "../Qurry/Qurry.module.scss";
 import axios from 'axios';
 import Slide from '@mui/material/Slide';
@@ -9,8 +10,12 @@ import { useName } from '../../nameContaxt'; // Import the useName hook
 
 export const EnquiryForm = () => {
     const navigate = useNavigate();
+    const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [submitting, setSubmitting] = useState(false); 
     const { setName } = useName(); // Access the setName function from the context
-
+    const [recaptchaToken, setRecaptchaToken] = useState(null); 
     const [formData, setFormData] = useState({
         course: '',
         firstName: '',
@@ -29,10 +34,7 @@ export const EnquiryForm = () => {
         email: '',
         address: ''
     });
-    const [successMessage, setSuccessMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [submitting, setSubmitting] = useState(false); 
+   
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -48,7 +50,7 @@ export const EnquiryForm = () => {
                 navigate("/thank-you");
             } catch (error) {
                 if (error.response && error.response.status === 409) {
-                    setErrorMessage("Email/PhoneNo already submitted");
+                    setErrorMessage(error.response.data);
                     console.log("biki")
                     console.log(error)
                     console.log(errorMessage)
@@ -179,18 +181,22 @@ export const EnquiryForm = () => {
                 </div>
                 <div className={styles.box}>
                     <TextField sx={{ width: "100%", margin: "10px 0" }} name="phoneNo" label="Phone" variant="outlined" autoComplete="off" onChange={handleInputChange} onBlur={() => handleBlur("phoneNo")} value={formData.phoneNo} error={!!formErrors.phoneNo } helperText={formErrors.phoneNo} />
-                    {errorMessage && <p>{errorMessage}</p>}
+                 
                     <TextField sx={{ width: "100%", margin: "10px 0" }} name="email" label="Email" variant="outlined" autoComplete="off" onChange={handleInputChange} onBlur={() => handleBlur("email")} value={formData.email} error={!!formErrors.email} helperText={formErrors.email} />
-                    {errorMessage && <p>{errorMessage}</p>}
+                 
 
                 </div>
                 <TextField sx={{ width:"100%", margin:"10px 0"}} name="nationality" label="Nationality" variant="outlined" autoComplete="off" onChange={handleInputChange} onBlur={() => handleBlur("nationality")} value={formData.nationality} error={!!formErrors.nationality} helperText={formErrors.nationality} />
                 <TextField sx={{ width: "100%", margin: "10px 0" }} name="address" label="Address" variant="outlined" autoComplete="off" onChange={handleInputChange} onBlur={() => handleBlur("address")} value={formData.address} error={!!formErrors.address} helperText={formErrors.address} />
-                <Button className={styles.btn} type="submit" disabled={loading || submitting}>
-                    {loading || submitting ? <CircularProgress size={24} /> : 'Submit'}
-                </Button>
+                <ReCAPTCHA
+                    sitekey="6LdFTIopAAAAAIFMU2ujEd_ZBETrFWCN5bL2ixos" 
+                    onChange={(token) => setRecaptchaToken(token)} 
+                />
+              <Button className={styles.btn} type="submit" disabled={loading || submitting || !recaptchaToken}>
+                {loading || submitting ? <CircularProgress size={24} /> : 'Submit'}
+            </Button>
             </form>
-            {/* <Stack
+          <Stack
                 style={{
                     position: 'fixed',
                     top: 0,
@@ -199,21 +205,15 @@ export const EnquiryForm = () => {
                     padding: '20px' // Add padding for better visibility
                 }}
                 >
-                {successMessage && (
-                    <Slide direction="down" in={successMessage} mountOnEnter unmountOnExit>
-                        <Alert severity="success" onClose={handleCloseAlerts} className={styles.alert} sx={{ color: 'green' , background:"green" }}>
-                            {successMessage}
-                        </Alert>
-                    </Slide>
-                )}
+               
                 {errorMessage && (
                     <Slide direction="down" in={errorMessage} mountOnEnter unmountOnExit>
-                        <Alert severity="error" onClose={handleCloseAlerts} className={styles.alert} sx={{ color: 'red' , background:"green"}}>
-                            {errorMessage}
+                        <Alert severity="error" onClose={handleCloseAlerts} className={styles.alert} sx={{ color: 'red' , background:"red"}}>
+                            <p style={{textTransform:"capitalize" , margin:"0"}}>{errorMessage}</p>
                         </Alert>
                     </Slide>
                 )}
-                </Stack> */}
+                </Stack> 
         </div>
     );
 };

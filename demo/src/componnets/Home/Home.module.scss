@@ -374,7 +374,7 @@
             }
             p{
                 color: $white;
-                font-size: 14px;
+                font-size: 10px;
                 opacity: 0.5;
                 font-weight: 300;
                 letter-spacing: 0.25px;
@@ -433,7 +433,7 @@
             }
             p{
                 color: $white;
-                font-size: 14px;
+                font-size: 10px;
                 opacity: 0.5;
                 font-weight: 300;
                 letter-spacing: 0.25px;
@@ -518,28 +518,44 @@
         }
     }
 
+    .notice {
+        background-color: $black_sec;
+        padding: 0.5rem;
+    }
+    
     .notice_list {
         overflow: hidden; 
         display: flex;
         align-items: center;
         justify-content: center;
         padding-right: 3rem;
-      }
-      
-      .notice_item {
+    }
+    
+    .notice_item {
         color: $red;
         padding-right: 3rem;
-        transform: translateX(300%);
-        animation: slide 5s linear infinite ; 
-      }
-      @keyframes slide {
+        transform: translateX(100%);
+        animation: slide 15s linear infinite, blink-animation 0.3s infinite alternate; 
+        font-size: 12px;
+    }
+    
+    @keyframes slide {
         0% {
-          transform: translateX(300%);
+            transform: translateX(200%);
         }
         100% {
-          transform: translatex(-100%);
+            transform: translateX(-100%);
         }
-      }
+    }
+    
+    @keyframes blink-animation {
+        from {
+            color: red;
+        }
+        to {
+            color: yellow;
+        }
+    }
     .our_program{
         padding: 1rem 0;
         background-color: $black_pry;

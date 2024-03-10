@@ -3,41 +3,46 @@ import styles from "../Gallery/Gallery.module.scss";
 import { Link } from 'react-router-dom';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import img1 from "../../assests/class1.jpg"
-import img2 from "../../assests/class (2).jpg"
+// import img1 from "../../assests/class1.jpg"
+import img2 from "../../assests/img (3).webp"
 import img3 from "../../assests/inst (1).jpeg"
 import img4 from "../../assests/inst (2).jpeg"
 import img5 from "../../assests/inst (3).jpeg"
+import img6 from "../../assests/img (1).webp"
+import img7 from "../../assests/img (5).webp"
+import img8 from "../../assests/img (3).webp"
+
 export default function Gallery() {
   const [category, setCategory] = useState('all');
   const [fade, setFade] = useState(false);
 
   const Classes = [
     {
-      img: img1,
-      title: 'Breakfast',
+      img: img6,
+      title: '',
     },
     {
-      img:img2,
-      title: 'Burger',
+      img:img7,
+      title: '',
+    }, {
+      img:img8,
+      title: '',
     },
-    // Add more food items
   ];
 
   const Instruments = [
     {
       img: img3,
-      title: 'Camera',
+      title: '',
     },
     {
       img: img4,
-      title: 'Hats',
+      title: '',
     },
     {
       img: img5,
-      title: 'Hats',
+      title: '',
     },
-    // Add more items for other categories
   ];
 
   const allItems = [...Classes, ...Instruments];
@@ -49,7 +54,7 @@ export default function Gallery() {
     setTimeout(() => {
       setCategory(selectedCategory);
       setFade(false);
-    }, 300); // Adjust the duration of the fade animation as needed
+    }, 300); 
   };
 
   return (
@@ -64,7 +69,6 @@ export default function Gallery() {
               <li><Link onClick={() => handleCategoryChange('all')} className={category === 'all' ? styles.active : ''}>All categories</Link></li>
               <li><Link onClick={() => handleCategoryChange('Instruments')} className={category === 'Instruments' ? styles.active : ''}>Instruments</Link></li>
               <li><Link onClick={() => handleCategoryChange('Classes')} className={category === 'Classes' ? styles.active : ''}>Classes</Link></li>
-              {/* Add more categories as needed */}
             </ul>
           </div>
 

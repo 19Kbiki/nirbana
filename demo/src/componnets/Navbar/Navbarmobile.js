@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import style from "./Navbar.module.scss"
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { navbarMenu } from "../../config/config";
+import { companyDetails, navbarMenu } from "../../config/config";
 import { NavHashLink } from "react-router-hash-link";
 
 export const NavbarMobile = ( ) => {
@@ -58,7 +58,7 @@ return(
                   <h6>Quick talk with our team : </h6>
                   <h6>
                     <i class="fa-solid fa-phone"></i> 
-                    62960-71630
+                    {companyDetails.phoneNo}
                   </h6>
                 </div>
                 <div className={style.right}>

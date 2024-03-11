@@ -1,0 +1,20 @@
+$pry_color:#fee9cc;
+$red:#A80302;
+$white: #fff;
+$black_pry:#151515;
+$black_sec:#272727;
+$black_third: #181818;
+$blue_sec: #89c3f3;
+
+@mixin black-overlay {
+    position: relative;
+    &::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background-color: #000000d0;
+    };
+}
